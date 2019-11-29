@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MedicalHerbs.App" >
+    <Application.Resources>
+
+       
+            <ResourceDictionary>
+            
+            <Style x:Key="imagePage" TargetType="Image">
+                <Setter Property="Source" Value="bgMainPage.png" />
+             </Style>
+
+            
+
+            <Style x:Key="searchBar" TargetType="SearchBar">
+                <Setter Property="TextColor"  Value="White"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="Placeholder" Value="Что ищем?"/>
+                <Setter Property="PlaceholderColor" Value="DarkGray"/>
+                <Setter Property="BackgroundColor" Value="Black"/>
+                <Setter Property="CancelButtonColor" Value="White"/>
+                
+                
+            </Style>
+                
+            <Style x:Key="listViewStyle" TargetType="ListView">
+                
+                <Setter Property="RefreshControlColor" Value="DarkGray"/>
+                <Setter Property="SeparatorVisibility" Value="None"/>
+            </Style>
+
+            <Style x:Key="labelListView"  TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+
+            <Style x:Key="labelDetailsHeader"  TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+
+                <Style x:Key="labelDetailsBody"  TargetType="Label">
+                    <Setter Property="TextColor" Value="DarkSlateGray"/>
+                    <Setter Property="FontSize" Value="Body"/>
+                </Style>
+
+
+                <Style x:Key="navigationPage" TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="Transparent" />
+                <Setter Property="BarTextColor" Value="White"/>
+                <Setter Property="BarBackgroundColor" Value="Black"/>
+           
+
+            </Style>
+
+            <Style x:Key="buttonStyle" TargetType="Button">
+                    <Setter Property="HorizontalOptions" Value="Center" />
+                    <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="BackgroundColor" Value="Transparent"   />
+                
+                
+                <Setter Property="TextColor" Value="White" />
+                </Style>
+
+            <Style x:Key="frameStyle" TargetType="Frame" >
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BackgroundColor" Value="WhiteSmoke"/>
+                <Setter Property="HasShadow" Value="True"/>
+                <Setter Property="Padding" Value ="10"/>
+                <Setter Property="Opacity" Value="1"/>
+                <Setter Property="BorderColor" Value="Black"/>
+            </Style>   
+            </ResourceDictionary>
+        
+    </Application.Resources>
+    
+</Application>

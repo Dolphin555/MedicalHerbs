@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             
+             mc:Ignorable="d"
+             Title="Поиск по болезням"
+             x:Class="MedicalHerbs.DeseasesView">
+    <NavigationPage.TitleView>
+         <SearchBar Style="{StaticResource searchBar}" x:Name="SearchValue"  TextChanged="SearchValue_TextChanged"  />
+
+    </NavigationPage.TitleView>
+
+
+    <ContentPage.Content>
+        <StackLayout Margin="15,5"  >
+             
+            <ListView    Style="{StaticResource listViewStyle}"    x:Name="listView"    ItemTapped="ListView_ItemTapped" RowHeight="60"       >
+                 
+                  <ListView.ItemTemplate    >
+                     
+                  
+                    <DataTemplate   >
+                        
+                            <ViewCell   x:Name="viewCell"    >
+                                
+                            <StackLayout>
+                                <Frame BackgroundColor="Transparent" CornerRadius="5" BorderColor="White" HeightRequest="50"  Margin="0,0,0,0" Padding="0" HasShadow="True"  >
+                                    <StackLayout HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand">
+                                        <Label Style="{StaticResource labelListView}"  x:Name="labelList" Text="{Binding Name}" Margin="0,0,0,3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                           
+                        </ViewCell>
+                        
+                    </DataTemplate> 
+                  
+                </ListView.ItemTemplate  >
+              
+            </ListView>
+           
+        </StackLayout>   
+</ContentPage.Content>
+   </ContentPage>

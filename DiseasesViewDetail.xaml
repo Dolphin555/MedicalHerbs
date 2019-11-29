@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="{Binding Name}"
+             x:Class="MedicalHerbs.DiseasesViewDetail">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="favoriteItem"   Order="Primary" Clicked="favoriteItem_Clicked"  />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content >
+        <StackLayout Padding="20" >
+            <Label Style="{StaticResource labelDetailsHeader}"  x:Name="LabelDiseaseName" Text="{Binding Name}"    />
+             <Frame Style="{d:StaticResource frameStyle}">           
+               <ScrollView >  
+                   <StackLayout>    
+                      
+                        <Label Style="{StaticResource  labelDetailsBody}"   x:Name="LabelDiseaseDetail"     />
+                </StackLayout>
+             </ScrollView>
+          </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

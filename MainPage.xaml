@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             
+             mc:Ignorable="d"
+             Title="Справочник здоровья"
+             x:Class="MedicalHerbs.MainPage" 
+             x:Name="contentPageMain">
+ 
+
+
+
+    <StackLayout   >
+                
+                <!-- Place new controls here -->
+
+                <Label x:Name="Label1"  />
+                <Grid  HorizontalOptions="Center" VerticalOptions="Center" Padding="10">
+                     <Button  Style="{StaticResource Key=buttonStyle}"  Grid.Row="0" Text="Лечение травами" x:Name="ButtonListOfDiseases" Clicked="ButtonListOfDiseases_Clicked" />
+                     <Button  Style="{StaticResource Key=buttonStyle}"  Grid.Row="1" Text="Упражнения" IsVisible="False"  />
+                     <Button  Style="{StaticResource Key=buttonStyle}"  Grid.Row="1" Text="Избранное"  x:Name="ButtonFavorites" Clicked="ButtonFavorites_Clicked" ImageSource="" />
+                     <Button Style="{StaticResource Key=buttonStyle}" Grid.Row="2" Text="О программе" x:Name="ButtonAbout"  Clicked="ButtonAbout_Clicked" />
+                     <Button Style="{StaticResource Key=buttonStyle}" Grid.Row="3" Text="Выход" x:Name="ButtonExit" Clicked="ButtonExit_Clicked" />
+        </Grid> 
+
+            </StackLayout>
+    
+</ContentPage>

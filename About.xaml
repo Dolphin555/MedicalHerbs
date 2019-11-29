@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MedicalHerbs.About"
+             Title="О программе">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Grid>
+                 <Label
+                    Grid.Row="1"
+                    x:Name="labelAbout" Style="{StaticResource Key=labelListView}" 
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Label
+                    Grid.Row="2"
+                    x:Name="labelAutor" Style="{StaticResource Key=labelListView}" 
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+               
+                 
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
