@@ -26,9 +26,27 @@ namespace MedicalHerbs.Data
         //возвращаем полный путь локальной БД
         public string GetDatabasePath(string sqliteFilename)
         {
-            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            string documentsPath;
+            switch (Device.RuntimePlatform)
+            {
+                case Device.Android:
+                    documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+                    break;
+                case Device.iOS:
+                    documentsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "..", "Library");
+                    break;
+                case Device.UWP:
+                    documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                    break;
+                default:
+                    documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                    break;
+            }
+            
+           
+            
             var path = Path.Combine(documentsPath, sqliteFilename);
-            // копирование файла из папки Assets по пути path
+            // копирование файла БД из папки Assets по пути path
             if (!File.Exists(path))
             {
                 // получаем контекст приложения

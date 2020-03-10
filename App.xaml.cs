@@ -19,7 +19,7 @@ namespace MedicalHerbs
             {
                 if (database == null)
                 {
-                    database = new LocalDatabase("medherbs1.db3");
+                    database = new LocalDatabase("medherbs2.db3");
                 }
                 return database;
             }
