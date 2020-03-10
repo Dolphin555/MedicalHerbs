@@ -29,11 +29,13 @@ namespace MedicalHerbs
         {
             if (d.Favorite)
             {
-                favoriteItem.IconImageSource = ImageSource.FromResource("MedicalHerbs.Icon.starYellow.png", typeof(DiseasesViewDetail).GetTypeInfo().Assembly);
+                favoriteItem.IconImageSource = ImageSource.FromResource("MedicalHerbs.Icon.starYellow.png", 
+                    typeof(DiseasesViewDetail).GetTypeInfo().Assembly);
             }
             else
             {
-                favoriteItem.IconImageSource = ImageSource.FromResource("MedicalHerbs.Icon.starWhite.png", typeof(DiseasesViewDetail).GetTypeInfo().Assembly);
+                favoriteItem.IconImageSource = ImageSource.FromResource("MedicalHerbs.Icon.starWhite.png", 
+                    typeof(DiseasesViewDetail).GetTypeInfo().Assembly);
             }
         }
 
